@@ -1,7 +1,7 @@
 // our-domain.com/news
 
-function News() {
+function NewsPage() {
   return <h1>The News Page</h1>;
 }
 
-export default News;
+export default NewsPage;
