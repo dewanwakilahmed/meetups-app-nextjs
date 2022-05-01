@@ -23,12 +23,12 @@ function Homepage(props) {
   return <MeetupList meetups={props.meetups} />;
 }
 
-export async function getServerSideProps() {
-  const req = context.req;
-  const res = context.res;
-
+export async function getStaticProps() {
   return {
-    props: DUMMY_MEETUPS,
+    props: {
+      meetups: DUMMY_MEETUPS,
+    },
+    revalidate: 1,
   };
 }
 
